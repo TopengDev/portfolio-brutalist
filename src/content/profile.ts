@@ -1,0 +1,28 @@
+export const profile = {
+  full: "Christopher Indrawan",
+  alias: "Toper",
+  title: "Builder",
+  current: "Builder @ Aenoxa",
+  location: "Jakarta / Bekasi, ID",
+  worksRemote: "Remote-friendly, worldwide",
+  languages: ["Bahasa Indonesia (native)", "English (professional)"],
+  email: "topengdev@gmail.com",
+  emailAlt: "topengdev@outlook.com",
+  github: "TopengDev",
+  githubUrl: "https://github.com/TopengDev",
+  linkedin: "christopher-indrawan-dev",
+  linkedinUrl: "https://linkedin.com/in/christopher-indrawan-dev/",
+  site: "topengdev.com",
+  siteUrl: "https://topengdev.com",
+  company: "aenoxa.com",
+  companyUrl: "https://aenoxa.com",
+  oneLiner:
+    "Builder. Next.js, Kotlin, Postgres. Currently shipping Pulse — multi-tenant POS SaaS.",
+  about: [
+    "Builder out of Jakarta. Right now the bulk of my time goes into Aenoxa — a small software company we are spinning up — and its flagship product Pulse, a multi-tenant POS SaaS for Indonesian SMBs. I write the Next.js + TypeScript front-end, the Postgres-backed multi-tenant API, the Capacitor + Kotlin native Android wrapper for thermal/label printing, and the deploy pipeline that puts it all on a VPS through GitHub Actions.",
+    "Outside of Pulse I take on custom software builds and AI workflow automation work for entrepreneurs who need to ship fast. I also have a landing-page generator SaaS in the oven, and an e-commerce aggregator (Shopee/Tokopedia/Lazada inside a single POS dashboard) on the Pulse roadmap.",
+    "By day-job I am a fullstack engineer at PT. Indosat / BMS / Ihsan Solusi (BUMN and banking sector work, Java/Spring + Next.js front-ends) — but the work I would want you to evaluate me on is what I ship at Aenoxa.",
+    "Stack I reach for: Next.js, React, TypeScript, Rust, Go, Flutter, Kotlin (Android native), Bun, PostgreSQL, Docker, Cloudflare, GitHub Actions. Comfortable from raw TCP socket up to React Server Components.",
+    "If you are shipping something interesting and want a builder who can take it from native mobile to cloud infra without context-switching managers — topengdev@gmail.com.",
+  ],
+};
