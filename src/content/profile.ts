@@ -6,8 +6,8 @@ export const profile = {
   location: "Jakarta / Bekasi, ID",
   worksRemote: "Remote-friendly, worldwide",
   languages: ["Bahasa Indonesia (native)", "English (professional)"],
-  email: "topengdev@gmail.com",
-  emailAlt: "topengdev@outlook.com",
+  email: "topengdev@outlook.com",
+  emailAlt: "topengdev@gmail.com",
   github: "TopengDev",
   githubUrl: "https://github.com/TopengDev",
   linkedin: "christopher-indrawan-dev",
@@ -23,6 +23,6 @@ export const profile = {
     "Outside of Pulse I take on custom software builds and AI workflow automation work for entrepreneurs who need to ship fast. I also have a landing-page generator SaaS in the oven, and an e-commerce aggregator (Shopee/Tokopedia/Lazada inside a single POS dashboard) on the Pulse roadmap.",
     "By day-job I am a fullstack engineer at PT. Indosat / BMS / Ihsan Solusi (BUMN and banking sector work, Java/Spring + Next.js front-ends) — but the work I would want you to evaluate me on is what I ship at Aenoxa.",
     "Stack I reach for: Next.js, React, TypeScript, Rust, Go, Flutter, Kotlin (Android native), Bun, PostgreSQL, Docker, Cloudflare, GitHub Actions. Comfortable from raw TCP socket up to React Server Components.",
-    "If you are shipping something interesting and want a builder who can take it from native mobile to cloud infra without context-switching managers — topengdev@gmail.com.",
+    "If you are shipping something interesting and want a builder who can take it from native mobile to cloud infra without context-switching managers — topengdev@outlook.com.",
   ],
 };
