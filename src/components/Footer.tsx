@@ -54,20 +54,26 @@ export function Footer() {
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 py-10 md:py-14">
         <div className="grid grid-cols-12 gap-4 md:gap-8">
           <div className="col-span-12 md:col-span-6">
-            <span className="section-index">011 / 011 — Colophon</span>
-            <p className="mt-4 font-[family-name:var(--font-mono)] text-[12px] text-[color:var(--color-paper-dim)] leading-[1.7] max-w-[58ch]">
+            <span className="section-index">011 / 011 — Mission</span>
+            <p
+              className="mt-4 font-[family-name:var(--font-display)] font-medium tracking-tight leading-[1.1] text-2xl md:text-4xl text-[color:var(--color-paper)] max-w-[22ch]"
+              style={{ textWrap: "balance" }}
+            >
+              Multi-tenant SaaS, native shells, autonomous bots —{" "}
+              <span className="text-[color:var(--color-signal)] italic">
+                all running on one VPS reliably &amp; autonomously.
+              </span>
+            </p>
+            <p className="mt-6 font-[family-name:var(--font-mono)] text-[11px] text-[color:var(--color-paper-dim)] leading-[1.7] max-w-[58ch]">
               Set in <span className="text-[color:var(--color-paper)]">Space Grotesk</span>{" "}
               (display) and <span className="text-[color:var(--color-paper)]">JetBrains Mono</span>{" "}
-              (body). Printed in one accent colour:{" "}
-              <span className="text-[color:var(--color-signal)]">#FF4400</span>. Built on Next.js,
-              Tailwind, Framer Motion. No trackers. No cookies. No forms.
-            </p>
-            <p className="mt-3 font-[family-name:var(--font-mono)] text-[11px] text-[color:var(--color-paper-dim)]">
-              Press{" "}
+              (body). One accent:{" "}
+              <span className="text-[color:var(--color-signal)]">#FF4400</span>. Next.js, Tailwind,
+              Framer Motion. No trackers. No cookies. No forms. Press{" "}
               <kbd className="border border-[color:var(--color-line-strong)] px-1 py-[1px] text-[10px]">
                 G
               </kbd>{" "}
-              to toggle the 12-column grid overlay.
+              for the 12-col grid overlay.
             </p>
           </div>
 

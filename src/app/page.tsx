@@ -1,5 +1,7 @@
 import LandingLoader from "./LandingLoader";
+import { getAllPosts } from "@/lib/posts";
 
 export default function Page() {
-  return <LandingLoader />;
+  const posts = getAllPosts();
+  return <LandingLoader posts={posts} />;
 }

@@ -15,6 +15,7 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { CursorDot } from "@/components/CursorDot";
 import { GridOverlay } from "@/components/GridOverlay";
+import type { PostMeta } from "@/lib/posts";
 
 const MARQUEE_ITEMS = [
   "BUILDER",
@@ -31,7 +32,7 @@ const MARQUEE_ITEMS = [
   "HIRE THE BUILDER NOT THE DECK",
 ];
 
-export default function Landing() {
+export default function Landing({ posts }: { posts: PostMeta[] }) {
   return (
     <main className="relative min-h-[100dvh] bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
       <CursorDot />
@@ -46,7 +47,7 @@ export default function Landing() {
       <Services />
       <Now />
       <Uses />
-      <Writing />
+      <Writing posts={posts} />
       <Contact />
       <Footer />
     </main>

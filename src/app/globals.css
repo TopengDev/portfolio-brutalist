@@ -202,6 +202,90 @@ pre.terminal {
   .accent-dot { display: none; }
 }
 
+/* MDX prose — used by /blog/[slug] */
+.prose-brutalist {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--color-paper);
+  max-width: 68ch;
+}
+.prose-brutalist > * + * {
+  margin-top: 1.4em;
+}
+.prose-brutalist h1,
+.prose-brutalist h2,
+.prose-brutalist h3,
+.prose-brutalist h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--color-paper);
+  margin-top: 2.2em;
+}
+.prose-brutalist h2 { font-size: 28px; }
+.prose-brutalist h3 { font-size: 22px; }
+.prose-brutalist h4 { font-size: 18px; }
+.prose-brutalist a {
+  color: var(--color-signal);
+  border-bottom: 1px solid var(--color-signal);
+  padding-bottom: 1px;
+}
+.prose-brutalist a:hover {
+  background: var(--color-signal-dim);
+}
+.prose-brutalist code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: rgba(255, 68, 0, 0.08);
+  border: 1px solid var(--color-line);
+  padding: 1px 6px;
+}
+.prose-brutalist pre {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.65;
+  padding: 20px;
+  border: 1px solid var(--color-line);
+  background: #050505;
+  white-space: pre;
+  overflow-x: auto;
+}
+.prose-brutalist pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.prose-brutalist blockquote {
+  border-left: 2px solid var(--color-signal);
+  padding-left: 16px;
+  color: var(--color-paper-dim);
+  font-style: italic;
+}
+.prose-brutalist ul,
+.prose-brutalist ol {
+  padding-left: 1.4em;
+}
+.prose-brutalist ul li {
+  list-style: disc;
+}
+.prose-brutalist ol li {
+  list-style: decimal;
+}
+.prose-brutalist hr {
+  border: 0;
+  border-top: 1px solid var(--color-line);
+  margin: 2em 0;
+}
+.prose-brutalist strong {
+  color: var(--color-paper);
+  font-weight: 600;
+}
+.prose-brutalist em {
+  font-style: italic;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: #000; }

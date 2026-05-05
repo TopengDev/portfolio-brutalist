@@ -1,0 +1,11 @@
+---
+title: "Why we killed our HTTPS bridge for a Kotlin plugin"
+date: 2026-04-22
+excerpt: "Chrome Private Network Access, JetDirect :9100, and a receipt printer in the wild."
+tags: [pulse, capacitor, infrastructure]
+draft: false
+---
+
+Pulse runs in a browser. The receipt printer sits on the LAN. Browsers refuse to talk to LAN devices over plain HTTP, and Chrome's Private Network Access has been quietly tightening that fence for two years. We tried the usual workaround — a tiny HTTPS bridge running on the cashier's machine, self-signed cert, listening on `127.0.0.1`. It worked for a week. Then Chrome blocked it. Then we patched it. Then it blocked it again. Cat-and-mouse with the platform is a losing game.
+
+The fix wasn't a smarter bridge. It was the wrong layer. We wrapped Pulse in a Capacitor shell — a native Android app with a WebView — and wrote a Kotlin plugin that opens raw TCP sockets to JetDirect port `9100`. WebViews are exempt from PNA. Sockets are mundane. Receipts print in 200ms. The web POS code didn't change; only the deployment did. This is the industry-standard pattern hiding in plain sight: every serious POS vendor ships a native shell around their web product. We just took a year to learn it the hard way.
