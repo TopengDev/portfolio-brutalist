@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { profile } from "@/content/profile";
 
 type Params = { slug: string };
 
@@ -18,9 +19,33 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+  const ogUrl = `/blog/${post.slug}/og`;
+  const url = `/blog/${post.slug}`;
+  const isoDate = post.date ? new Date(post.date).toISOString() : undefined;
   return {
-    title: `${post.title} — Christopher Indrawan`,
+    title: post.title,
     description: post.excerpt,
+    keywords: post.tags,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: post.title,
+      description: post.excerpt,
+      siteName: "TopengDev",
+      publishedTime: isoDate,
+      modifiedTime: isoDate,
+      authors: [profile.full],
+      tags: post.tags,
+      images: [{ url: ogUrl, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogUrl],
+      creator: "@topengdev",
+    },
   };
 }
 
@@ -37,8 +62,39 @@ export default async function PostPage({ params }: { params: Promise<Params> }) 
   const post = getPostBySlug(slug);
   if (!post || post.draft) notFound();
 
+  const isoDate = post.date ? new Date(post.date).toISOString() : undefined;
+  const url = `${profile.siteUrl}/blog/${post.slug}`;
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    keywords: post.tags.join(", "),
+    inLanguage: "en",
+    url,
+    image: [`${profile.siteUrl}/blog/${post.slug}/og`],
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: {
+      "@type": "Person",
+      name: profile.full,
+      url: profile.siteUrl,
+      sameAs: [profile.githubUrl, profile.linkedinUrl],
+    },
+    publisher: {
+      "@type": "Person",
+      name: profile.full,
+      url: profile.siteUrl,
+    },
+  };
+
   return (
     <main className="relative min-h-[100dvh] bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       <div className="mx-auto max-w-[860px] px-6 md:px-10 py-16 md:py-24">
         <div className="mb-12 flex flex-wrap items-baseline justify-between gap-4 border-b border-[color:var(--color-line)] pb-6">
           <Link

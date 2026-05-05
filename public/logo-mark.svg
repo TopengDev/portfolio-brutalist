@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TopengDev mark">
+  <rect width="64" height="64" fill="#000000"/>
+  <!-- registration ticks -->
+  <g fill="#A8A8A8">
+    <rect x="3" y="3" width="6" height="1"/>
+    <rect x="3" y="3" width="1" height="6"/>
+    <rect x="55" y="3" width="6" height="1"/>
+    <rect x="60" y="3" width="1" height="6"/>
+    <rect x="3" y="60" width="6" height="1"/>
+    <rect x="3" y="55" width="1" height="6"/>
+    <rect x="55" y="60" width="6" height="1"/>
+    <rect x="60" y="55" width="1" height="6"/>
+  </g>
+  <!-- T/D — JetBrains Mono ExtraBold, hand-tuned -->
+  <text x="32" y="44"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="800"
+    font-size="34"
+    text-anchor="middle"
+    letter-spacing="-1"
+    fill="#FAFAFA">T<tspan fill="#FF4400">/</tspan>D</text>
+</svg>

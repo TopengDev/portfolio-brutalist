@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 96" width="480" height="96" role="img" aria-label="TOPENG/DEV — Christopher Indrawan">
+  <rect width="480" height="96" fill="#000000"/>
+  <!-- top hairline -->
+  <rect x="24" y="22" width="432" height="1" fill="rgba(250,250,250,0.35)"/>
+  <!-- bottom hairline -->
+  <rect x="24" y="73" width="432" height="1" fill="rgba(250,250,250,0.35)"/>
+  <!-- file index, top -->
+  <text x="24" y="18"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="500"
+    font-size="9"
+    letter-spacing="2"
+    fill="#A8A8A8">FILE / 01</text>
+  <text x="456" y="18"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="500"
+    font-size="9"
+    letter-spacing="2"
+    text-anchor="end"
+    fill="#A8A8A8">JKT · UTC+7</text>
+  <!-- TOPENG/DEV mark -->
+  <text x="24" y="58"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="800"
+    font-size="32"
+    letter-spacing="-1"
+    fill="#FAFAFA">TOPENG<tspan fill="#FF4400">/</tspan>DEV</text>
+  <!-- bottom kicker -->
+  <text x="24" y="88"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="500"
+    font-size="9"
+    letter-spacing="2"
+    fill="#A8A8A8">CHRISTOPHER INDRAWAN — BUILDER</text>
+  <text x="456" y="88"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="500"
+    font-size="9"
+    letter-spacing="2"
+    text-anchor="end"
+    fill="#A8A8A8">v1.0</text>
+</svg>

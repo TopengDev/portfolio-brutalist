@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="TopengDev mark">
+  <rect width="64" height="64" fill="#000000"/>
+  <text x="32" y="48"
+    font-family="JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
+    font-weight="800"
+    font-size="44"
+    text-anchor="middle"
+    letter-spacing="-2"
+    fill="#FAFAFA">T<tspan fill="#FF4400">/</tspan>D</text>
+</svg>

@@ -3,8 +3,22 @@ import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Writing — Christopher Indrawan",
-  description: "Notes from the workshop.",
+  title: "Writing",
+  description: "Notes from the workshop. Field reports on Pulse, Capacitor, native bridges, infrastructure, and the long tail of shipping software in production.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Writing — Christopher Indrawan",
+    description: "Notes from the workshop.",
+    url: "/blog",
+    type: "website",
+    images: [{ url: "/og-default.png", width: 1200, height: 630, alt: "TopengDev — Writing" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Writing — Christopher Indrawan",
+    description: "Notes from the workshop.",
+    images: ["/og-default.png"],
+  },
 };
 
 function fmtDate(iso: string) {
